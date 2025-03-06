@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, X, ShoppingCart, Trash2, CreditCard } from "lucide-react";
-import { CartItem, getCart, updateCartItemQuantity, removeFromCart, getCartTotal } from "@/utils/cartUtils";  // Import CartItem and cart functions
+import { CartItem, getCart, updateCartItemQuantity, removeFromCart, getCartTotal } from "@/utils/cartUtils";
 import { toast } from "@/hooks/use-toast";
 
 const Cart = () => {
