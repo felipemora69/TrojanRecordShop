@@ -188,7 +188,7 @@ const Cart = () => {
             </div>
           </div>
 
-          <div className="border-t border-border pt-3 mb-6">
+          <div className="border-t border-[#E2E8F0] pt-3 mb-6">
             <div className="flex justify-between font-medium text-lg">
               <span>Total</span>
               <span>{formattedTotal}</span>

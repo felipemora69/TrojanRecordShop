@@ -77,7 +77,7 @@ const Records = () => {
       </div>
       
       {/* Filter Bar */}
-      <div className="sticky top-16 z-40 bg-background/80 backdrop-blur-sm border-b border-border shadow-sm">
+      <div className="sticky top-16 z-40 bg-background/80 backdrop-blur-sm border-b border-[#E2E8F0] shadow-sm">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
           <div className="flex justify-between items-center">
             <div className="hidden md:flex space-x-2 overflow-x-auto">

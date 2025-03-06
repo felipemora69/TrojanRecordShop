@@ -13,7 +13,7 @@ export default function FeaturedRecords() {
   }, []);
   
   return (
-    <section className="section-padding">
+    <section className="section-padding py-12 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8">
           <div className="animate-slide-in">

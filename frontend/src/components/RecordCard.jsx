@@ -11,7 +11,7 @@ export default function RecordCard({ record, className, featured = false }) {
   return (
     <div 
       className={cn(
-        "record-card group",
+        "record-card group relative overflow-hidden rounded-lg transition-all duration-300 ",
         featured ? "overflow-hidden rounded-lg" : "",
         className
       )}

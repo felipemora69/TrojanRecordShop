@@ -1,72 +1,165 @@
 @import "tailwindcss";
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 240 6% 10%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 240 10% 3.9%;
+  --radius: 0.75rem;
+}
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+/* Global Styling */
+body {
+      background-color: hsl(var(--background)); /* Tailwind's bg-background color */
+      color: hsl(var(--foreground)); /* Tailwind's text-foreground color */
+      font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+}
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+html {
+    scroll-behavior: smooth;
+}
 
-    --primary: 240 6% 10%;
-    --primary-foreground: 0 0% 98%;
+/* Component Styling */
+.btn-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+.btn-secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+.bg-muted {
+  background-color: hsl(var(--muted));
+}
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+.border-radius-lg {
+  border-radius: var(--radius);
+}
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+.border-radius-md {
+  border-radius: calc(var(--radius) - 2px);
+}
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
+.border-radius-sm {
+  border-radius: calc(var(--radius) - 4px);
+}
 
-    --radius: 0.75rem;
+/* Keyframes and Animations */
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
   }
-
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground antialiased;
-    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
-  }
-
-  html {
-    @apply scroll-smooth;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@layer utilities {
-  .glass-morphism {
-    @apply backdrop-blur-sm bg-white/70 border border-white/20 shadow-sm;
+@keyframes slide-in {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
   }
-  
-  .record-card {
-    @apply relative overflow-hidden rounded-lg transition-all duration-300;
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  .record-card img {
-    @apply transition-transform duration-700 ease-in-out;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  
-  .record-card:hover img {
-    @apply scale-105;
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .section-padding {
-    @apply py-12 px-4 md:px-6 lg:px-8;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
   }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Animations */
+.accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+.slide-in {
+  animation: slide-in 0.5s ease-out;
+}
+
+.slide-up {
+  animation: slide-up 0.6s ease-out;
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Utility classes for Tailwind colors */
+.border {
+  border-color: hsl(var(--border));
+}
+
+.bg-background {
+  background-color: hsl(var(--background));
+}
+
+.text-foreground {
+  color: hsl(var(--foreground));
+}
+
+.text-primary {
+  color: hsl(var(--primary-foreground));
+}
+
+.text-secondary {
+  color: hsl(var(--secondary-foreground));
 }
 
 #root {

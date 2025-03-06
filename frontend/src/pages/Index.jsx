@@ -12,7 +12,7 @@ const Index = () => {
       <FeaturedRecords />
       
       {/* Genres Section */}
-      <section className="section-padding bg-secondary">
+      <section className="section-padding py-12 px-4 md:px-6 lg:px-8 bg-secondary">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">Browse by Genre</h2>
           
@@ -32,7 +32,7 @@ const Index = () => {
       </section>
       
       {/* About Preview Section */}
-      <section className="section-padding">
+      <section className="section-padding py-12 px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div className="animate-slide-in">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">The Authentic Vinyl Experience</h2>
@@ -64,7 +64,7 @@ const Index = () => {
       </section>
       
       {/* Newsletter */}
-      <section className="section-padding bg-primary text-primary-foreground">
+      <section className="section-padding py-12 px-4 md:px-6 lg:px-8 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Stay Updated</h2>
           <p className="mb-6 max-w-xl mx-auto">

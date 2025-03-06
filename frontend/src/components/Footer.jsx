@@ -68,7 +68,7 @@ export default function Footer() {
         </div>
       </div>
       
-      <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-border">
+      <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-[#E2E8F0]">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
             &copy; {currentYear} Vinyl Haven. All rights reserved.
